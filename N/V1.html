@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page {
+            display: none;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        h1 {
+            color: #ff4b5c;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4b5c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e63946;
+        }
+
+        .gift-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .gift-buttons button {
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: none;
+            background: #ff4b5c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .next-btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            background: #444;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .letter-box {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .letter-text {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.7;
+            margin-top: 20px;
+        }
+
+        #dot1:checked~.slides {
+            transform: translateX(0);
+        }
+
+        #dot2:checked~.slides {
+            transform: translateX(-33.333%);
+        }
+
+        #dot3:checked~.slides {
+            transform: translateX(-66.666%);
+        }
+
+        /* Highlight the active dot */
+        #dot1:checked~.dots label[for="dot1"],
+        #dot2:checked~.dots label[for="dot2"],
+        #dot3:checked~.dots label[for="dot3"] {
+            background: #333 !important;
+        }
+
+        .card-img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 12px;
+        }
+    </style>
+    <script>
+        var password = "Pillu";  // change this
+
+        var entered = prompt("Enter the password to open this page:");
+
+        if (entered !== password) {
+            document.write("Access Denied 💔");
+        } 
+    </script>
+</head>
+
+<body>
+
+    <!-- PAGE 1 -->
+
+
+    <div class="page active" id="page1">
+        <h1>Hey My Kuchupuuuu❤️</h1>
+        <p>
+            I made something special for you.<br>
+            Tap the button.
+        </p>
+        <button onclick="goToPage(2)">Tap Here</button>
+    </div>
+
+    <!-- PAGE 2 -->
+    <div class="page" id="page2">
+        <h1> Anniversary Letter 💌</h1>
+        <p>
+            HAPPY 6 MONTHS ANNIVERSARY BABY ❤️🧿 <br><br>
+
+            Yaar kiti lavkar 6 month marks half year zala aaplyala 🫂<br>
+            I can't belive 🫠<br>
+            I love you sooo much babyyyyy 😚❤️<br>
+            Kiti lavkar gele na 6 months samazles nhi <br>
+            Kiti kahi experience kele aapan ups down <br>
+            Kiti sagda romance ❤️<br>
+            Kiti sagda zagade 😗<br>
+            But I love you everytime 😚<br>
+            I am so lucky to have you I my life 🫂<br>
+            I really can't imagine my life without you 🥺<br>
+            The way you handle me everytime at every situation Kiti pan rag kela me tuzya varti tari pan tu samzun ghete
+            🫂<br>
+            I LOVE YOU SOOOO MUCH MY LOVE ❤️
+        </p>
+        <button onclick="goToPage(3)">Next →</button>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page" id="page3">
+        <h1>Valentine Letter 💌</h1>
+        <p>
+            HAPPY VALENTINE'S DAY BABE ❤️<br><br>
+            It's your first valentine<br>
+            And being away from you isn't easy 🥺<br>
+            Koi na baby 🫂<br>
+            Ha distance aaplya relationship chya madhat nhi yau shakat 🫂<br>
+            This distance is making our relationship more strong 🫂💪🏻<br>
+            I miss you babe I miss you sooo muchhhhh<br>
+            Har vadas mala vatte tu ithe aasav but koi na struggle tar karas lagnar ankhi has struggle aaplyala strong
+            banvat ahe 🫂<br>
+            And I was am & will always always love you Baby<br>
+            Lavkras aashe divas yanar jevha he sagde struggle fakta ek memory rahanar 🫂<br>
+            I love you sooo much baby mala experience nhi karta yet ahe ki how much I love you
+            🫂🫂🫂🫂🫂😚😚😚😚😚❤️❤️❤️❤️<br>
+        </p>
+        <button onclick="goToPage(4)">Next →</button>
+    </div>
+
+    <div class="page" id="page4">
+        <h1>Hey My Pumkin❤️</h1>
+        <p>
+            Now babby I have some photos and screenshot of our best moments<br>
+            (Te diary sarkhas ahe thoda but with photos)
+        </p>
+        <button onclick="goToPage(5)">Next →</button>
+    </div>
+
+
+    <div class="page" id="page5">
+        <img src="1.jpeg" class="card-img" alt="...">
+
+        <h1>Aapla first love you 🫠</h1>
+
+        <button onclick="goToPage(6)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page6">
+        <img src="2.jpeg" class="card-img" alt="...">
+        <p>Aapla first relationship touch 🫠<br>
+            Sorry me tya vadas jasta thambu nohoti shakat<br>
+            Aasa Purna life time me tuza hath pakadun rahane baby 🫂<br>
+            Kadhis Kadhis Kadhis Nhi Sodnar Bala 🫂❤️</p>
+        <button onclick="goToPage(7)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page7">
+        <img src="3.jpeg" class="card-img" alt="...">
+
+        <p>Aapla first meetup 🫠<br>
+            Aapla first hug 🫂<br>
+            First kiss 😚<br>
+            Every thing was so so magical 🫠</p>
+        <button onclick="goToPage(8)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page8">
+        <p>Second meetup in rain 🫠 tevha chi photo nhi ahe but it's okay 😚<br>
+            Yaar kiti Masta hug kela hota me tula<br>
+            Amhi rain madhe te kiss 🫠🫠🫠🫠🫠</p>
+        <button onclick="goToPage(9)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page9">
+        <img src="4.jpeg" class="card-img" alt="...">
+
+
+        <p>He tar photo aapan frame karun thavu 😚❤️</p>
+        <button onclick="goToPage(10)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page10">
+        <img src="5.jpeg" class="card-img" alt="...">
+
+        <h1>First hickeys 🤭</h1>
+
+        <button onclick="goToPage(11)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page11">
+        <img src="6.jpeg" class="card-img" alt="...">
+
+
+        <p>Kiti chan hug karun ahe mi tula 🫂<br>
+            Khup man hot ahe re nikhil tula aata hug karaicha khup khup jasta 🫂🫂🫂🫂</p>
+        <button onclick="goToPage(12)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page12">
+        <img src="7.jpeg" class="card-img" alt="...">
+
+        <h1>Car meeting 🫠</h1>
+        <p>
+            Kiti gham gham zalo hoto aapan 🫠<br>
+            Ankhi tuzya neck var maza nishan 🤭
+        </p>
+
+        <button onclick="goToPage(13)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page13">
+        <img src="8.jpeg" class="card-img" alt="...">
+
+
+        <p>Saki cha name ghaun bhatlo hoto 🫠<br>
+            Khup ved sobat hoti 🫂🫂🫂
+        </p>
+        <button onclick="goToPage(14)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page14">
+        <img src="9.jpeg" class="card-img" alt="...">
+
+
+        <p>I just love this ss tya sathi yat thavla 😁<br>
+            Pan yaar kiti cute disat ahe maza baby yat 🫂🫂🫂</p>
+        <button onclick="goToPage(15)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page15">
+        <p>Aata je hota te sagda tar tu vachla ahe aaplya diary madhe tya sathi me jasta describe nhi kela</p>
+        <button onclick="goToPage(16)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page16">
+        <img src="10.jpeg" class="card-img" alt="...">
+
+
+        <p>Yaar nikhilllllllllllll 🫠🫠🫠<br>
+            Tu maza bday la aala hota maza sathi specially pune 🫠🫠🫠<br>
+            I love you so much re.<br>
+            Tu maza bday ekdam ekdam ekdam special banavla ekdamas jastaaaaaaaaa 🫠🫠🫠🫠🫠🫠</p>
+        <button onclick="goToPage(17)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page17">
+        <img src="11.jpeg" class="card-img" alt="...">
+        <p>Aapan soabt cake cutting keli ankhi me tuza gift tula maza hatani dela 🫠🫠</p>
+        <button onclick="goToPage(18)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page18">
+        <img src="12.jpeg" class="card-img" alt="...">
+
+
+        <p>Ek dam sakadi sakadi aapan fakta dogha 🫠🫂<br>
+            Kiti chavat hoti me tula 😚😚<br>
+            Aapan to fan pan ghatla hota 😚😚</p>
+        <button onclick="goToPage(19)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page19">
+        <img src="13.jpeg" class="card-img" alt="...">
+
+        <p>Khup khup maja aali hoti maggie pann khalli hoti aapan 😁<br>
+            Ya days che tar kiti photos takle tari pan Kami ahe❤️<br>
+            Didi chya flat varrrr 🫠🫠🫠🫠<br>
+            Kiti sagdya hickeys delya hota tu mala 😚🤭<br>
+            Kiti kiti jasta lad kela hota baby tu maza 😚😚😚</p>
+        <button onclick="goToPage(20)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page20">
+        <img src="14.jpeg" class="card-img" alt="...">
+
+        <h1>Kiti sundar photo ahe he 🫠🫠🫠❤️</h1>
+        <button onclick="goToPage(21)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page21">
+        <img src="15.jpeg" class="card-img" alt="...">
+
+        <p>Ankhi ha photo tar describe karaicha kamas nhi mala yk it baby 😚</p>
+        <button onclick="goToPage(22)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page22">
+        <img src="16.jpeg" class="card-img" alt="...">
+
+        <h1>Yes yes and always yessss 😚😚😚😚😚</h1>
+
+        <button onclick="goToPage(23)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page23">
+        <img src="17.jpeg" class="card-img" alt="...">
+
+        <h1>I love you re maza javad words nhi vachle kahi pan express karaich satthi 🫂🫂🫂</h1>
+
+        <button onclick="goToPage(24)">Next →</button>
+
+    </div>
+
+    <div class="page" id="page24">
+
+        <p>It's done for now baby 😚<br>
+            I love you always 😚😚<br>
+            Ankhi me jevha he lihat hoti tar me har vadas radat hoti re khup khup Khup aathavn yete re nikhil tuzi mala
+            🫂<br>
+            I really miss you soooo much 🫂🥺<br>
+            I Always Love You Nikhil<br>
+            Ankhi sorry for me khup chidte tuzya var pan mala mahit ahe tu maza safe place ahe tar har ek emotional
+            tuzya javad<br>
+            nighte maze 🫂<br>
+            I am so sorry maza mude khup tras hote tula Purna mood kharab karte me 🫂<br>
+            I love you re I love you sooo much 🫂🫂🫂🫂</p>
+
+    </div>
+
+
+    </div>
+
+
+    <script>
+        function goToPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+
+            document.getElementById('page' + pageNumber)
+                .classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
